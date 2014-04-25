@@ -9,8 +9,8 @@
 ## get the value of the inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-	## variable that stores the inverse
-	invMat <- NULL
+    ## variable that stores the inverse
+    invMat <- NULL
     ## function that stores the matrix in the variable set
     set <- function(y) {
      
@@ -37,7 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
     ## store the inverse in the variable invMat   
-	invMat <- x$getInvMat()
+    invMat <- x$getInvMat()
     ## loop that checks if the inverse is in the cache
     if (!is.null(invMat)) {
    
@@ -47,7 +47,7 @@ cacheSolve <- function(x, ...) {
     }
    
     else {
-	## get the matrix from makeCacheMatrix   
+    ## get the matrix from makeCacheMatrix   
     data <- x$get()
     ## calculate the inverse
     invMat <- solve(data, ...)
